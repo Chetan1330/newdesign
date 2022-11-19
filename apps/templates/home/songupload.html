@@ -1,0 +1,91 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}   
+
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
+
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <!-- [ Main Content ] start -->
+                        
+                            <div class="row">
+                                <div class="col-12">
+                                  <div class="card ">
+                                    <div class="card-header">
+                                      <h4 class="card-title text-left">List of Songs</h4>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="table-responsive">
+                                        <table class="tablemanager table" id="">
+                                          <thead class=" text-primary">
+                                            <tr>
+                                              <th class="disableFilterBy">#</th>
+                                              <th>
+                                                Track Title
+                                              </th>
+                                              <th>
+                                                Artist Name
+                                              </th>
+                                              <th>
+                                                Album Name
+                                              </th>
+                                              <th>
+                                                Artwork
+                                              </th>
+                                              <th>
+                                                Genre
+                                              </th>
+                                              <th>
+                                                Album Name
+                                              </th>
+                                              <th>
+                                                Daily Revenue
+                                              </th>
+                                              <th>
+                                                Weekly Revenue
+                                              </th>
+                                              <th>
+                                                Monthly Revenue
+                                              </th>
+                                              <th>
+                                                Yearly Revenue
+                                              </th>
+                                            </tr>
+                                          </thead>
+                                          {% for n,t,a,d in alldata %}
+                                          <tbody>
+                                            <tr>
+                                              <td>{{n}}</td>
+                                              <td>
+                                                {{t}}
+                                              </td>
+                                              <td>
+                                                {{d}}
+                                              </td>
+                                              <td>
+                                                {{a}}
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                          {% endfor %}
+                                        </table>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        
+                        <!-- [ Main Content ] end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock content %}
